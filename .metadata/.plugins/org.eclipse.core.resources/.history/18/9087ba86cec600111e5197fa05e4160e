@@ -1,0 +1,17 @@
+package com;
+class a{
+	class b{
+		static void m1() {
+			System.out.println("this is inner class");
+		}
+	}
+	
+}
+public class check {
+	public static void main(String[]args) {
+		a A=new a();
+		a.b B=A.new b();
+		A.m1();
+		
+	}
+}

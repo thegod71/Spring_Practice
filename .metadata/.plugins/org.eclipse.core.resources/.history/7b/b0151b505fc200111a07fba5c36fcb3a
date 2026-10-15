@@ -1,0 +1,31 @@
+package com;
+import javax.annotation.processing.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("app2")
+public class app2 {
+
+    @Value("rahul")
+    private String n;
+
+    @Autowired
+    private app a;
+
+    public app2() {
+        super();
+        System.out.println("object is created in app2"+ "-> "+ this.hashCode());
+        
+    }
+    @PostConstruct
+    public void init() {
+        System.out.println(
+            "app object hashcode -> " + a.hashCode()
+        );
+    }
+    
+//    public String toString() {
+//        return "app2 [n=" + n + ", a=" + a + "]";
+//    }
+}

@@ -1,0 +1,17 @@
+package com;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@ComponentScan(basePackages="com")
+@EnableScheduling
+public class test {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext AC=new AnnotationConfigApplicationContext(test.class);
+		app a=(app)AC.getBean("app");
+		a.m1();
+	}
+
+}

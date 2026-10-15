@@ -1,0 +1,41 @@
+package com;
+
+import java.util.concurrent.locks.Lock;
+
+class parent implements Lock{
+	public void method() {
+		System.out.println(Thread.currentThread().getName());
+	}
+}
+class Mythread extends Thread {
+	Mythread(String name){
+		super();
+	}
+	public void run() {
+		System.out.println("This is thread not get lock");
+		try 
+		{
+			parent p=new parent();
+			p.method();
+			Thread.sleep(5000);
+		}
+		catch(Exception e) {
+			
+		}
+	}
+}
+class child {
+	
+	
+}
+public class practice {
+	
+	public static void main(String[] args)throws Exception {
+		Mythread t1=new Mythread("Thread1");
+		Mythread t2=new Mythread("thread2");
+		t1.start();
+		t2.start();
+		
+	}
+
+}

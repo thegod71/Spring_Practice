@@ -1,0 +1,30 @@
+package com;
+class a{
+	
+	 
+	 int x=0;
+		static void m1() {
+			
+			// x=20;
+			System.out.println("this is inner class"+ x);
+			static class b{
+				//int x=200;
+				 static void m2() {
+					
+					System.out.println("this is outer class");
+				}
+			}
+			b B=new b();
+			B.m2();
+		}
+}
+public class check {
+	public static void main(String[]args) {
+		a A=new a();
+		//a.b B=A.new b();
+		A.m1();
+//		a.b B=A.new b();
+//		A.m1();
+		
+	}
+}

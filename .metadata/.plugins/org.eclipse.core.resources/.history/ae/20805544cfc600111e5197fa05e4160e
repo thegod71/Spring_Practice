@@ -1,0 +1,22 @@
+package com;
+class a{
+	 int x=0;
+	 class b{
+		 int x=10;
+		 void m1() {
+			System.out.println("this is inner class"+ x);
+		}
+	}
+	
+	
+}
+public class check {
+	public static void main(String[]args) {
+		a A=new a();
+		a.b B=A.new b();
+		B.m1();
+//		a.b B=A.new b();
+//		A.m1();
+		
+	}
+}

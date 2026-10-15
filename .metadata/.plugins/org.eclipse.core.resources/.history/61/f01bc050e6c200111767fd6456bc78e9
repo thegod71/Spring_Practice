@@ -1,0 +1,11 @@
+package com;
+
+import org.springframework.stereotype.Component;
+
+@Component("f")
+public class firstclass implements first {
+@Override
+public void myapp() {
+	System.out.println("This is first Class");
+}
+}

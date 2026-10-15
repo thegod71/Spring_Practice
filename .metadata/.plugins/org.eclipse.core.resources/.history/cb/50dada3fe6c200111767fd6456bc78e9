@@ -1,0 +1,17 @@
+package com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("sec")
+public class secondclass {
+	secondclass(){
+		super();
+	}
+	@Autowired
+ private  first f;
+ public void get() {
+	 System.out.println(f.myapp());
+ }
+	
+}

@@ -1,0 +1,26 @@
+package com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("app2")
+public class app2 {
+
+@Value("rahul")
+private String n;
+@Autowired
+private app a;
+
+public app2(String n, app a) {
+	super();
+	this.n = n;
+	this.a = a;
+}
+
+@Override
+public String toString() {
+	return "app2 [n=" + n + ", a=" + a + "]";
+}
+
+}

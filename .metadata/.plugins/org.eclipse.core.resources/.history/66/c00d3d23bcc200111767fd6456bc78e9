@@ -1,0 +1,26 @@
+package com;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan(basePackages="com")
+public class test {
+
+	public static void main(String[] args) {
+			
+		ApplicationContext ac=new AnnotationConfigApplicationContext(test.class);
+		app2 a=(app2) ac.getBean("app2");
+		a.p();
+		
+//		System.out.println("Second time call");
+//		app2 b=(app2) ac.getBean("app2");
+//		b.p();
+//		app b=(app) ac.getBean("app");
+//		app c=(app) ac.getBean("app");
+//		app d=(app) ac.getBean("app");
+//		app e=(app) ac.getBean("app");
+	}
+
+	
+}

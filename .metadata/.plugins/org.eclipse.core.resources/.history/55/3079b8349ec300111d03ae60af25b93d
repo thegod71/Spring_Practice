@@ -1,0 +1,23 @@
+package com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("my")
+public class myclass {
+	@Autowired
+	private app a;
+	@Value("#{app.id}")
+	private String val;
+	public myclass() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getVal() {
+		return val;
+	}
+	public void setVal(String val) {
+		this.val = val;
+	}
+
+}

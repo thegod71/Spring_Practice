@@ -1,0 +1,42 @@
+package com;
+import java.util.Random;
+
+import javax.annotation.processing.*; 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Lookup;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("app2")
+public class app2 {
+
+    @Value("rahul")
+    private String n;
+
+    @Autowired
+    private app a;
+    Random r = new Random();
+
+    int num = r.nextInt(100);
+    public app2() {
+        super();
+        
+        System.out.println("object is created in app2"+ "-> "+ num);
+        
+    }
+    @Lookup
+    public app get() {
+    	System.out.println("LookUp Method call");
+    	return null;
+    }
+    public void p() {
+    	get();        //System.out.println(get());
+        System.out.println("Link with the app-> "+a.get1());
+    }
+    
+    
+    
+//    public String toString() {
+//        return "app2 [n=" + n + ", a=" + a + "]";
+//    }
+}

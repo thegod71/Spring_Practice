@@ -1,0 +1,18 @@
+@Component("app2")
+public class app2 {
+
+    @Value("rahul")
+    private String n;
+
+    @Autowired
+    private app a;
+
+    public app2() {
+        super();
+    }
+
+    @Override
+    public String toString() {
+        return "app2 [n=" + n + ", a=" + a + "]";
+    }
+}

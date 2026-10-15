@@ -1,0 +1,62 @@
+package com;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+class parent{
+	Lock lock = new ReentrantLock();
+
+    public void method() {
+    	
+        lock.lock();
+        if(lock.tryLock()) {
+        	System.out.println("This is inside trylock");
+        try {
+            System.out.println(Thread.currentThread().getName());
+
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        } finally {
+            lock.unlock();
+        }
+        }
+        else {
+        	System.out.println("This is outside trylock");
+        }
+    }
+}
+class Mythread extends Thread {
+	parent p;
+	Mythread(String name,parent p){
+		
+		super(name);
+		this.p=p;
+	}
+	public void run() {
+		System.out.println("This is inside run");
+		try 
+		{
+			p.method();
+		}
+		catch(Exception e) {
+			
+		}
+	}
+}
+class child {
+	
+	
+}
+public class practice {
+	
+	public static void main(String[] args)throws Exception {
+		parent p=new parent();
+		Mythread t1=new Mythread("Thread1",p);
+		Mythread t2=new Mythread("thread2",p);
+		t1.start();
+		t2.start();
+		
+	}
+
+}

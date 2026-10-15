@@ -1,0 +1,9 @@
+package com;
+
+public class myclass {
+
+	public myclass() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

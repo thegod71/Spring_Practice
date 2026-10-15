@@ -1,0 +1,20 @@
+package com;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("sec")
+public class secondclass implements second{
+	secondclass(){
+		super();
+	}
+	
+@Autowired
+public first f;
+@Override
+public void app(){
+	f.myapp();
+	System.out.println("This is second class");
+}
+ 
+}

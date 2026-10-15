@@ -1,0 +1,13 @@
+package com;
+
+import org.springframework.stereotype.Component;
+
+@Component("app")
+public class app {
+	@Value("#{'This is from app'}")
+	private String  id;
+	public app() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

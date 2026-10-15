@@ -1,0 +1,28 @@
+package com;
+class parent extends Thread{
+	public static InheritableThreadLocal l=new InheritableThreadLocal();
+	public void run() {
+		
+		l.set("Parent");
+		child c=new child();
+		c.start();
+	}
+}
+class child extends Thread{
+	
+	public void run() {
+		
+		System.out.println(parent.l.get());
+		
+	}
+}
+public class practice {
+	public static InheritableThreadLocal l1=new InheritableThreadLocal();
+	l1.set("main");
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		parent p=new parent();
+		p.start();
+	}
+
+}
