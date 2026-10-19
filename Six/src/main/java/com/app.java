@@ -11,9 +11,9 @@ public class app {
 	public app() {
 		// TODO Auto-generated constructor stub
 	}
-//	@Scheduled(fixedDelay=2000)//in milli sec
-//	public void m1() {
-//		System.out.println("hell0 this is delay "+ new Da  te());
-//	}
+	@Scheduled(fixedDelay=2000)//in milli sec
+	public void m1() {
+		System.out.println("hell0 this is delay "+ new Da  te());
+	}
     
 }
