@@ -11,7 +11,7 @@ public class test {
 		AnnotationConfigApplicationContext	ac=new AnnotationConfigApplicationContext(test.class);
 		first fs=(first)ac.getBean("f");
 		System.out.print(fs);
-		
+		System.out.print("THIS Is PULL");
 	}
 
 }
