@@ -11,7 +11,8 @@ public class test {
 			AnnotationConfigApplicationContext ac=new AnnotationConfigApplicationContext(test.class);
 	
 			app c=(app)ac.getBean("app");
-			System.out.println("This is push");
+			System.out.println("This is pull");
+			
 	}
 
 }
